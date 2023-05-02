@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br><hr><br>");
+    }
+
+function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+    function calcularImc(peso,altura) {
+       return peso/(altura*altura);
+       
+       }
+       
+      nombre = prompt("Ingrese su nombre");
+      pesousu = prompt(nombre + ", Ingrese su peso");
+      alturausu = prompt(nombre + ", Ingrese su altura")
+
+      imcusu = calcularImc(pesousu,alturausu);
+      imprimir(nombre + ", su IMC es "+imcusu);
+
+      if(imcusu<18.5){
+
+        imprimir("bajo peso")
+      }
+      if (imcusu>=18.5 && imcusu<24.9) {
+        imprimir("Peso normal")
+      }
+      if (imcusu>=25 && imcusu<29.9) {
+        imprimir("Pre-obseidad o sobrepeso")
+      }
+      if (imcusu>=30 && imcusu<34.9) {
+
+        imprimir("Obesidad clase I")
+      }
+      if (imcusu>=35 && imcusu<39.9) {
+
+        imprimir("Obesidad clase II")
+      }
+      if (imcusu>=40) {
+
+        imprimir("Obesidad clase III")
+      }
+
+ </script>
